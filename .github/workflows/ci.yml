@@ -1,14 +1,11 @@
-name: DevOps Resume API CI Pipeline
+name: DevOps Resume API CI/CD Pipeline
 
 on:
   push:
     branches:
       - main
       - dev
-      - feature/*
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
 
