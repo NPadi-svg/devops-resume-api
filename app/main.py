@@ -17,7 +17,7 @@ def root():
 @app.get("/profile")
 def get_profile():
     return {
-        "name": "Neo Padi",
+        "name": "NEO PADI",
         "role": "DevOps Engineer",
         "location": "South Africa",
         "skills": [
