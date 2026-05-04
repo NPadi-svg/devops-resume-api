@@ -1,3 +1,4 @@
+import logging
 from fastapi import FastAPI
 from datetime import datetime
 
@@ -6,9 +7,11 @@ app = FastAPI(
     description="Cloud-native resume service showcasing DevOps capabilities",
     version="1.0.0"
 )
+logger = logging.getLogger("uvicorn")
 
 @app.get("/")
 def root():
+    logger.info("🚀 Root endpoint hit")
     return {
         "message": "Welcome to the DevOps Resume API 🚀",
         "timestamp": datetime.utcnow()
